@@ -1,48 +1,401 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Oleg_Ryzhkov_Github_Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oleg Ryzhkov Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="style.css" rel="stylesheet">
 </head>
-​
 <body>
-  <h1>Oleg Ryzhkov</h1>
-  <img src="http://lorempixel.com/output/animals-q-g-640-480-3.jpg"/>
-​
-  <p>Hi. My name is Oleg Ryzhkov. I like data</p>
-  <p>I live in Evanston, Illinois with my family</p>
-​
-  <ol>
-    <li><a href="https://www.linkedin.com/in/oleg-n-ryzhkov/">LinkedIn</a></li>
-  </ol>
-​
-  <table border="1">
-    <tr>
-      <th>Projects/Assignments</th>
-      <th>Place</th>
-      <th>Descriptions</th>
-      <th>Technologies</th>
-    </tr>
-    <tr>
-      <td>US Oil Market Analysis</td>
-      <td>Boot camp final project</td>
-      <td>Crude oil pricing prediction model</td>
-      <td>Python, PostgreSQL, HTML, CSS</td>
-    </tr>
-    <tr>
-      <td>SQLAlchemy-challenge</td>
-      <td>Boot camp home work assignment</td>
-      <td>Simple FLASK app for climate analysis</td>
-      <td>Python(SQLAlchemy, FLASK), HTML, CSS</td>
-    </tr>
-    <tr>
-      <td>Chicago Crime&Well Being</td>
-      <td>Boot camp group project</td>
-      <td>Crime data analysis from different sources</td>
-      <td>Python(Pandas, Matplotlib, Geomapping)</td>
-    </tr>
-  </table>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="images/ISLET-LOGO.jpg"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--- Welcome Page -->
+  <div class="container-fluid padding first-container">
+    <span class="anchor" id="Home"></span>
+    <div class="row padding">
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="images/oleg.jpg">
+          <div class="card-body">
+            <h4 class="card-title">Oleg Ryzhkov</h4>
+            <p class="card-text">Experienced Executive/Entrepreneur
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card">
+          <div id="slides" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#slides" data-slide-to"0" class="active"></li>
+              <li data-target="#slides" data-slide-to"1"></li>
+              <li data-target="#slides" data-slide-to"2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block" src="images/evanston.jpg" alt="First slide">
+                <div class="carousel-caption">
+                  <h4 class="display-2">Evanston, Illinois, USA</h4>
+                  <h5>Current location since July 2020</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="images/chicago.jpg" alt="Second slide">
+                <div class="carousel-caption">
+                  <h4 class="display-2">Chicago, Illinois, USA</h4>
+                  <h5>Location: December 2019 - July 2020</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="images/tbilisi.jpg" alt="Third slide">
+                <div class="carousel-caption">
+                  <h4 class="display-2">Tbilisi, Georgia</h4>
+                  <h5>Location: September 2012 - December 2019</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="images/kiev.jpg" alt="Fourth slide">
+                <div class="carousel-caption">
+                  <h4 class="display-2">Kiev, Ukraine</h4>
+                  <h5>Location: 2004 - 2010</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="images/london.jpg" alt="Fourth slide">
+                <div class="carousel-caption">
+                  <h4 class="display-2">London, UK</h4>
+                  <h5>Location: 2010 - 2011</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--- Skills Section -->
+  <div class="container-fluid padding">
+    <div class="row padding">
+      <span class="anchor" id="Skills"></span>
+      <div class="col-12">
+        <h3>SKILLS:</h3>
+        <p>Business Analyst/Manager with in-depth experience in the energy sector,
+          knowledge of the CIS market, and newly equipped skills in programming and
+          data analysis from Northwestern University's Data Science and Visualization
+          Boot Camp. Problem-solving, data intuition, and strategic thinking expertise
+          are backed by more than 20 years of business experience and a solid educational
+          background from the Executive MBA program of the University of Chicago, the Booth
+          School of Business. Resilience along with vision and ability to recognize opportunity
+          is grounded by more than 7 years of entrepreneurial experience in building a business
+          from scratch.
+        </p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <h4>Core Competences</h4>
+        <div class="row padding">
+          <br>
+          <a class="navbar-brand"><img src="images/tools/bpm.png"></a>
+          <a class="navbar-brand"><img src="images/tools/project_man.png"></a>
+        </div>
+        <div class="row padding">
+          <a class="navbar-brand"><img src="images/tools/data_analysis.png"></a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <h4>Technologies</h4>
+        <div class="row padding">
+          <br>
+          <a class="navbar-brand"><img src="images/tools/vba.png"></a>
+          <a class="navbar-brand"><img src="images/tools/python.jpg"></a>
+          <a class="navbar-brand"><img src="images/tools/js.jpg"></a>
+        </div>
+        <div class="row padding">
+          <a class="navbar-brand"><img src="images/tools/html.png"></a>
+          <a class="navbar-brand"><img src="images/tools/css.png"></a>
+          <a class="navbar-brand"><img src="images/tools/bootstrap.png"></a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <h4>Databases</h4>
+        <div class="row padding">
+          <a class="navbar-brand"><img src="images/tools/sqlite.jpg"></a>
+          <a class="navbar-brand"><img src="images/tools/postgre.jpg"></a>
+          <a class="navbar-brand"><img src="images/tools/mongo.jpg"></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+  </div>
+
+  <!--- Experience: ISLET GROUP -->
+  <div class="container-fluid padding first-container">
+    <span class="anchor" id="Experience"></span>
+    <div class="row padding">
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="images/ISLET-LOGO.jpg">
+          <div class="card-body">
+            <h4 class="card-title">ISLET GROUP</h4>
+            <p class="card-text">Experienced Executive/Entrepreneur
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card">
+          <div id="slides" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#slides" data-slide-to"0" class="active"></li>
+              <li data-target="#slides" data-slide-to"1"></li>
+              <li data-target="#slides" data-slide-to"2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block" src="images/slide_1.png" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="images/slide_map.png" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="images/slide_11.png" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="images/slide_13.png" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block" src="images/slide_14.png" alt="Fifth slide">
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--- Experience: RIG GAS -->
+  <div class="container-fluid padding">
+    <span class="anchor"></span>
+    <div class="row padding">
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="images/oleg.jpg">
+          <div class="card-body">
+            <h4 class="card-title">Oleg Ryzhkov</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card">
+          <div class="container">
+            <h2>R.I.G. GAS Ltd</h2>
+            <p>Petroleum&LPG Terminal construction - Tbilisi, Georgia</p>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/Kkgp3iNLp4E"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--- Projects table -->
+<div class="container-fluid padding first-container">
+  <span class="anchor" id="Projects"></span>
+  <div class="row padding">
+    <div class ="col-lg-12">
+      <h2>Projects</h2>
+    </div>
+    <div class="col-lg-12">
+      <div class="table-responsive">
+        <table class="table table-striped table-dark table-sm" style="margin-bottom: 0">
+          <tr>
+            <th>Projects/Assignments</th>
+            <th>Place</th>
+            <th>Descriptions</th>
+            <th>Technologies</th>
+          </tr>
+          <tr>
+            <td>US Oil Market Analysis</td>
+            <td>Boot camp final project</td>
+            <td>Crude oil pricing prediction model</td>
+            <td>Python, PostgreSQL, HTML, CSS</td>
+          </tr>
+          <tr>
+            <td>SQLAlchemy-challenge</td>
+            <td>Boot camp home work assignment</td>
+            <td>Simple FLASK app for climate analysis</td>
+            <td>Python(SQLAlchemy, FLASK), HTML, CSS</td>
+          </tr>
+          <tr>
+            <td>Chicago Crime&Well Being</td>
+            <td>Boot camp group project</td>
+            <td>Crime data analysis from different sources</td>
+            <td>Python(Pandas, Matplotlib, Geomapping)</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!--- Education -->
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <span class="anchor" id="Education"></span>
+      <h1 class="display-4">Education Background</h1>
+    </div>
+    <hr>
+  </div>
+</div>
+<!--- Cards -->
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="images/booth.jpg">
+        <div class="card-body">
+          <h4 class="card-title">Chicago Booth, 2010-2012</h4>
+          <p class="card-text">20 months Executive MBA program (London campus). Includes: Concentration
+            in Entreprenuership (2012), Postgraduate courses in Business Statistics (Spring 2020) and Applied Regression (Autumn 2020)
+          </p>
+          <a href="https://olegryzhkov2020.github.io" class="btn btn-outline-secondary">See Profile</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="images/bootcamp.png">
+        <div class="card-body">
+          <h4 class="card-title">Data Science</h4>
+          <p class="card-text">Data Science and Visualization Program, which provides a 24-week intensive focused on gaining programming skills in Excel, VBA, Python, R, JavaScript, SQL, MongoDB, Bootstrap, HTML, CSS, Tableau, Big Data, and Machine Learning
+          </p>
+          <a href="https://bootcamp.northwestern.edu/data/landing/?s=Google-Brand&msg_cv_scta=4&msg_cv_stbn=1&msg_cv_fcta=1&fqvar1=3&pkw=%2Bnorthwestern%20%2Bdata%20%2Bscience&pcrid=458307975831&pmt=b&utm_source=google&utm_medium=cpc&utm_campaign=GGL%7CNORTHWESTERN-UNIVERSITY%7CSEM%7CDATA%7C-%7COFL%7CTIER-1%7CALL%7CBRD%7CBMM%7CCore%7CGeneral&utm_term=%2Bnorthwestern%20%2Bdata%20%2Bscience&s=google&k=%2Bnorthwestern%20%2Bdata%20%2Bscience&utm_adgroupid=111164443630&utm_locationphysicalms=9021565&utm_matchtype=b&utm_network=g&utm_device=c&utm_content=458307975831&utm_placement=&gclid=Cj0KCQjw4f35BRDBARIsAPePBHy8UXrwtmGCPMWt8x8hPqmPbh2bASUfIboQJGnFrzW_4d1LM2cq40YaAmHWEALw_wcB&gclsrc=aw.ds"
+          class="btn btn-outline-secondary">Website</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="images/bootcamp.png">
+        <div class="card-body">
+          <h4 class="card-title">Northwestern University, 2020</h4>
+          <p class="card-text">Data Science and Visualization Program, which provides a 24-week intensive focused on gaining programming skills in Excel, VBA, Python, R, JavaScript, SQL, MongoDB, Bootstrap, HTML, CSS, Tableau, Big Data, and Machine Learning
+          </p>
+          <a href="https://bootcamp.northwestern.edu/" class="btn btn-outline-secondary">Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="my-4">
+</div>
+</div>
+<!--- Connect -->
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <span class="anchor" id="Contacts"></span>
+    <div class="col-12">
+      <h2>Connect</h2>
+    </div>
+    <div class="col-12 social padding">
+      <a href="https://www.facebook.com/oleg.ryzhkov.90"><i class="fab fa-facebook" style="font-size:48px;color:#3b5998"></i></a>
+      <a href="https://www.linkedin.com/in/oleg-n-ryzhkov/"><i class="fab fa-linkedin" style="font-size:48px;color:black"></i></a>
+      <a href="https://github.com/OlegRyzhkov2020"><i class="fab fa-github" style="font-size:48px;color:red"></i></a>
+    </div>
+  </div>
+</div>
+<!--- Footer -->
+<footer>
+  <div class="container-fluid padding">
+    <div class="row text-center padding">
+      <div class="col-md-4">
+        <img src="#">
+        <hr class="light">
+        <p> Personal</p>
+        <p> Website</p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Class Hours</h5>
+        <hr class="light">
+        <p>Tue, Thu: 6pm-10pm</p>
+        <p>Saturday: 10am-2pm</p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Teaching Team</h5>
+        <hr class="light">
+        <p>Instructor: Will Wright</p>
+        <p>TA: Erin Wills, Jay Yu</p>
+      </div>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
+              <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-news py-2 text-white px-1 news"><span class="d-flex align-items-center">&nbsp;Data Quotes</span></div>
+              <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#">“In God we trust, all others bring data.” — W Edwards Deming </a> <span class="dot"></span> <a href="#">“If we have data, let’s look at data. If all we have are opinions, let’s go with mine.” — Jim Barksdale</a> </marquee>
+            </div>
+            <hr class="light">
+            <p class="blink_me">&copy; Oleg Ryzhkov 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
-​
 </html>
-Collapse
