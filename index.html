@@ -37,6 +37,9 @@
           <a class="btn btn-primary" href="#Skills">Skills</a>
         </li>
         <li class="nav-item">
+          <a class="btn btn-primary" href="#Projects">Projects</a>
+        </li>
+        <li class="nav-item">
           <div class="dropdown">
             <span class="btn btn-primary dropdown-toggle" role="button" id="#dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Experience
@@ -48,10 +51,15 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="btn btn-primary" href="#Projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary" href="#Education">Education</a>
+          <div class="dropdown">
+            <span class="btn btn-primary dropdown-toggle" role="button" id="#dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Education
+            </span>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#NWU">Northwestern University</a>
+              <a class="dropdown-item" href="#BOOTH">Chicago Booth</a>
+            </div>
+          </div>
         </li>
         <li class="nav-item">
           <a class="btn btn-primary" href="#Contacts">Contacts</a>
@@ -198,7 +206,118 @@
   </figure>
   <!--- Fixed background -->
   <hr class="my-4">
-
+  <!--- Projects table -->
+  <div class="container-fluid padding first-container">
+    <span class="anchor" id="Projects"></span>
+    <div class="row padding">
+      <div class="col-md-6">
+        <div class="table-responsive">
+          <table class="table table-sm" style="margin-bottom: 0">
+            <thead>
+              <tr class="table-primary">
+                <th>Projects</th>
+                <th>Period</th>
+                <th>Descriptions</th>
+                <th>Technologies</th>
+              </tr>
+            </thead>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Oil');" class= "small">
+              <td>US Oil Market Analysis</td>
+              <td>Aug 2020 - Nov 2020</td>
+              <td>Crude oil pricing prediction model</td>
+              <td>Python, PostgreSQL, HTML, CSS</td>
+            </tr >
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Web');" class= "small">
+              <td>Web Scrapping</td>
+              <td>August 2020</td>
+              <td>WeatherApp Website</td>
+              <td>Python (FLASK), MongoDB</td>
+            </tr>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Web');" class= "small">
+              <td>Web Design Challenge</td>
+              <td>August 2020</td>
+              <td>WeatherApp Website</td>
+              <td>Bootstrap, HTML, CSS, Python</td>
+            </tr>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Alchemy');" class= "small">
+              <td>SQLAlchemy-challenge</td>
+              <td>August 2020</td>
+              <td>Simple FLASK app for climate analysis</td>
+              <td>Python(SQLAlchemy, FLASK), HTML, CSS</td>
+            </tr>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Crime');" class= "small">
+              <td>Chicago Crime</td>
+              <td>July 2020</td>
+              <td>Crime data analysis from different sources</td>
+              <td>Python(Pandas, Matplotlib, Geomapping)</td>
+            </tr>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('API');" class= "small">
+              <td>API Challenge</td>
+              <td>July 2020</td>
+              <td>API interaction</td>
+              <td>Python()</td>
+            </tr>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Matplotlib');" class= "small">
+              <td>Matplotlib Challenge</td>
+              <td>July 2020</td>
+              <td>Simple FLASK app for climate analysis</td>
+              <td>Python(SQLAlchemy, FLASK), HTML, CSS</td>
+            </tr>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Pandas');" class= "small">
+              <td>Pandas Challenge</td>
+              <td>July 2020</td>
+              <td>Simple FLASK app for climate analysis</td>
+              <td>Python(Pandas)</td>
+            </tr>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Alchemy');" class= "small">
+              <td>Python Challenge</td>
+              <td>June 2020</td>
+              <td>Simple FLASK app for climate analysis</td>
+              <td>Python</td>
+            </tr>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('VBA');" class= "small">
+              <td>VBA Challenge</td>
+              <td>June 2020</td>
+              <td>Simple FLASK app for climate analysis</td>
+              <td>Python</td>
+            </tr>
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('TA');" class= "small">
+              <td>Scholar TA</td>
+              <td>February 2020 - August 2020</td>
+              <td>Data driven intelligent assistant for EdD students</td>
+              <td>Python, Lucid Chart</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-6 anyClass" id="target-container">
+        <span class="picture" id="Oil"></span>
+        <p>US oil market analysis, Boot Camp Final Project</p>
+        <img class="d-block" src="images/projects/oil.png">
+        <span class="picture" id="Web"></span>
+        <p>Web Design Challenge, Boot Camp Homework Assignment</p>
+        <img class="d-block" src="images/projects/web.png">
+        <span class="picture" id="Alchemy"></span>
+        <p>SQLAlchemy Challenge, Boot Camp Homework Assignment</p>
+        <img class="d-block" src="images/projects/alchemy.png">
+        <span class="picture" id="Crime"></span>
+        <p>Chicago Crime & Well Being, Boot Camp Group Project </p>
+        <img class="d-block" src="images/projects/crime.png">
+        <span class="picture" id="API"></span>
+        <p>API Challenge, Boot Camp Homework Assignment</p>
+        <img class="d-block" src="images/projects/api.png">
+        <span class="picture" id="Matplotlib"></span>
+        <p>Matplotlib Challenge, Boot Camp Homework Assignment</p>
+        <img class="d-block" src="images/projects/matplotlib.png">
+        <span class="picture" id="Pandas"></span>
+        <p>Pandas Challenge, Boot Camp Homework Assignment</p>
+        <img class="d-block" src="images/projects/pandas.png">
+        <span class="picture" id="VBA"></span>
+        <p>VBA Challenge, Boot Camp Homework Assignment</p>
+        <img class="d-block" src="images/projects/vba.png">
+      </div>
+    </div>
+  </div>
   <!--- Experience: ISLET GROUP -->
   <div class="container-fluid padding first-container">
     <span class="anchor" id="ISLET"></span>
@@ -291,147 +410,13 @@
     </div>
   </div>
 </div>
-<!--- Projects table -->
-<div class="container-fluid padding first-container">
-  <span class="anchor" id="Projects"></span>
-  <div class="row padding">
-    <div class="col-md-6">
-      <div class="table-responsive">
-        <table class="table table-sm" style="margin-bottom: 0">
-          <thead>
-            <tr class="table-primary">
-              <th>Projects</th>
-              <th>Period</th>
-              <th>Descriptions</th>
-              <th>Technologies</th>
-            </tr>
-          </thead>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Oil');" class= "small">
-            <td>US Oil Market Analysis</td>
-            <td>Aug 2020 - Nov 2020</td>
-            <td>Crude oil pricing prediction model</td>
-            <td>Python, PostgreSQL, HTML, CSS</td>
-          </tr >
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Web');" class= "small">
-            <td>Web Scrapping</td>
-            <td>August 2020</td>
-            <td>WeatherApp Website</td>
-            <td>Python (FLASK), MongoDB</td>
-          </tr>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Web');" class= "small">
-            <td>Web Design Challenge</td>
-            <td>August 2020</td>
-            <td>WeatherApp Website</td>
-            <td>Bootstrap, HTML, CSS, Python</td>
-          </tr>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Alchemy');" class= "small">
-            <td>SQLAlchemy-challenge</td>
-            <td>August 2020</td>
-            <td>Simple FLASK app for climate analysis</td>
-            <td>Python(SQLAlchemy, FLASK), HTML, CSS</td>
-          </tr>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Crime');" class= "small">
-            <td>Chicago Crime</td>
-            <td>July 2020</td>
-            <td>Crime data analysis from different sources</td>
-            <td>Python(Pandas, Matplotlib, Geomapping)</td>
-          </tr>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('API');" class= "small">
-            <td>API Challenge</td>
-            <td>July 2020</td>
-            <td>API interaction</td>
-            <td>Python()</td>
-          </tr>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Matplotlib');" class= "small">
-            <td>Matplotlib Challenge</td>
-            <td>July 2020</td>
-            <td>Simple FLASK app for climate analysis</td>
-            <td>Python(SQLAlchemy, FLASK), HTML, CSS</td>
-          </tr>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Pandas');" class= "small">
-            <td>Pandas Challenge</td>
-            <td>July 2020</td>
-            <td>Simple FLASK app for climate analysis</td>
-            <td>Python(Pandas)</td>
-          </tr>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Alchemy');" class= "small">
-            <td>Python Challenge</td>
-            <td>June 2020</td>
-            <td>Simple FLASK app for climate analysis</td>
-            <td>Python</td>
-          </tr>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('VBA');" class= "small">
-            <td>VBA Challenge</td>
-            <td>June 2020</td>
-            <td>Simple FLASK app for climate analysis</td>
-            <td>Python</td>
-          </tr>
-          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('TA');" class= "small">
-            <td>Scholar TA</td>
-            <td>February 2020 - August 2020</td>
-            <td>Data driven intelligent assistant for EdD students</td>
-            <td>Python, Lucid Chart</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div class="col-md-6 anyClass" id="target-container">
-      <span class="picture" id="Oil"></span>
-      <p>US oil market analysis, Boot Camp Final Project</p>
-      <img class="d-block" src="images/projects/oil.png">
-      <span class="picture" id="Web"></span>
-      <p>Web Design Challenge, Boot Camp Homework Assignment</p>
-      <img class="d-block" src="images/projects/web.png">
-      <span class="picture" id="Alchemy"></span>
-      <p>SQLAlchemy Challenge, Boot Camp Homework Assignment</p>
-      <img class="d-block" src="images/projects/alchemy.png">
-      <span class="picture" id="Crime"></span>
-      <p>Chicago Crime & Well Being, Boot Camp Group Project </p>
-      <img class="d-block" src="images/projects/crime.png">
-      <span class="picture" id="API"></span>
-      <p>API Challenge, Boot Camp Homework Assignment</p>
-      <img class="d-block" src="images/projects/api.png">
-      <span class="picture" id="Matplotlib"></span>
-      <p>Matplotlib Challenge, Boot Camp Homework Assignment</p>
-      <img class="d-block" src="images/projects/matplotlib.png">
-      <span class="picture" id="Pandas"></span>
-      <p>Pandas Challenge, Boot Camp Homework Assignment</p>
-      <img class="d-block" src="images/projects/pandas.png">
-      <span class="picture" id="VBA"></span>
-      <p>VBA Challenge, Boot Camp Homework Assignment</p>
-      <img class="d-block" src="images/projects/vba.png">
-    </div>
-  </div>
-</div>
+
 <!--- Education -->
 <hr class="my-4">
 <!--- Cards -->
 <div class="container-fluid padding">
+    <span class="anchor" id="NWU"></span>
   <div class="row padding">
-    <div class="col-md-4">
-      <div class="card">
-        <img class="card-img-top" src="images/booth.png">
-        <div class="card-body">
-          <h4 class="card-title">Chicago Booth, 2010-2012</h4>
-          <p class="card-text">20 months Executive MBA program (London campus). Includes: Concentration
-            in Entreprenuership (2012), Postgraduate courses in Business Statistics (Spring 2020) and Applied Regression (Autumn 2020)
-          </p>
-          <a href="https://olegryzhkov2020.github.io" class="btn btn-outline-secondary">See Profile</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img class="card-img-top" src="images/mim.png">
-        <div class="card-body">
-          <h4 class="card-title">Data Science</h4>
-          <p class="card-text">Data Science and Visualization Program, which provides a 24-week intensive focused on gaining programming skills in Excel, VBA, Python, R, JavaScript, SQL, MongoDB, Bootstrap, HTML, CSS, Tableau, Big Data, and Machine Learning
-          </p>
-          <a href="https://bootcamp.northwestern.edu/data/landing/?s=Google-Brand&msg_cv_scta=4&msg_cv_stbn=1&msg_cv_fcta=1&fqvar1=3&pkw=%2Bnorthwestern%20%2Bdata%20%2Bscience&pcrid=458307975831&pmt=b&utm_source=google&utm_medium=cpc&utm_campaign=GGL%7CNORTHWESTERN-UNIVERSITY%7CSEM%7CDATA%7C-%7COFL%7CTIER-1%7CALL%7CBRD%7CBMM%7CCore%7CGeneral&utm_term=%2Bnorthwestern%20%2Bdata%20%2Bscience&s=google&k=%2Bnorthwestern%20%2Bdata%20%2Bscience&utm_adgroupid=111164443630&utm_locationphysicalms=9021565&utm_matchtype=b&utm_network=g&utm_device=c&utm_content=458307975831&utm_placement=&gclid=Cj0KCQjw4f35BRDBARIsAPePBHy8UXrwtmGCPMWt8x8hPqmPbh2bASUfIboQJGnFrzW_4d1LM2cq40YaAmHWEALw_wcB&gclsrc=aw.ds"
-          class="btn btn-outline-secondary">Website</a>
-        </div>
-      </div>
-    </div>
     <div class="col-md-4">
       <div class="card">
         <img class="card-img-top" src="images/bootcamp.png">
@@ -443,8 +428,34 @@
         </div>
       </div>
     </div>
+    <div class="col-md-8">
+      <div class="card">
+        <img class="card-img-top" src="images/nwu_zoom.png">
+      </div>
+    </div>
   </div>
-  <hr class="my-4">
+</div>
+<div class="container-fluid padding">
+    <span class="anchor" id="BOOTH"></span>
+  <div class="row padding">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="images/booth.png">
+        <div class="card-body">
+          <h4 class="card-title">Chicago Booth, 2010-2012</h4>
+          <p class="card-text">20 months Executive MBA program (London campus). Includes: Concentration
+            in Entreprenuership (2012), Postgraduate courses in Business Statistics (Spring 2020) and Applied Regression (Autumn 2020)
+          </p>
+          <a href="https://www.chicagobooth.edu/" class="btn btn-outline-secondary">Website</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card">
+        <img class="card-img-top" src="images/booth_diplom.jpg">
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 <!--- Connect -->
