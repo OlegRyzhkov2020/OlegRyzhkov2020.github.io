@@ -4,6 +4,11 @@
   animation: blinker 5s linear infinite;
 }
 
+.signature {
+  font-weight: 500;
+  font-style: oblique;
+}
+
 @keyframes blinker {
   50% {
     opacity: 0;
@@ -29,7 +34,7 @@ img {
 a.nav-link {
   /*color: white !important;*/
 }
-.navbar-brand img {
+.navbar-brand img{
   height: 70px;
 }
 .navbar-nav li {
@@ -76,7 +81,7 @@ button
 */
 
 span.anchor {
-    margin-top: -100px !important; /* height of nav, in this case 54px */
+    margin-top: -120px !important; /* height of nav, in this case 54px */
     display: block;
     height: 100px; /* height of nav, in this case 54px */
     visibility: hidden;
