@@ -74,6 +74,7 @@ button
   border-color: #28a745;
 }
 */
+
 span.anchor {
     margin-top: -100px !important; /* height of nav, in this case 54px */
     display: block;
@@ -83,11 +84,11 @@ span.anchor {
 }
 
 .btn-primary {
-  background-color: #FFFFFF;
-  border: 1px solid #00008B;
+  background-color: rgb(248, 248, 249);
+  border: 0px;
   color: #111;
 }
-.btn-primary hover {
+.btn-primary :hover {
   background-color: #87CEFA;
   border: 1px solid #000000;
   color: #FFFFFF;
@@ -289,29 +290,32 @@ hr.light-100 {
 body {
   --table-width: 100%; /* Or any value, this will change dinamically */
 }
+table {
+  width: 100%;
+}
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
 tbody {
-  display:block;
-  max-height:500px;
+  display: block;
+  overflow-y: auto;
+  overflow-x: auto;
+  table-layout: fixed;
+  max-height: 400px;
+}
+
+.anyClass {
+  height:400px;
   overflow-y:auto;
   overflow-x: auto;
 }
 
-thead, tbody tr {
-  display:table;
-  width: var(--table-width);
-  table-layout:fixed;
+tr:hover {
+  color: black;
+  background: lightgrey !important;
 }
-
-.table-responsive {
-  max-height:400px;
-  margin-bottom: 15px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border: 1px solid #000000;
-  display:inline-block;
-  }
 
 .box-content {overflow-x:auto;}
 

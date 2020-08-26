@@ -9,6 +9,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script>
+    function scroll_to(target_id) {
+      var container = document.getElementById('target-container');
+      var scrollTo = document.getElementById(target_id);
+      container.scrollTop = scrollTo.offsetTop;
+    }
+  </script>
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -16,7 +23,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="images/ISLET-LOGO.jpg"></a>
+      <a class="navbar-brand" href="#">Personal Website</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#navbarResponsive">
       <span class="navbar-toggler-icon"></span>
@@ -24,16 +31,16 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="btn btn-success" href="#Home">Home</a>
+          <a class="btn btn-primary" href="#Home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-success" href="#Skills">Skills</a>
+          <a class="btn btn-primary" href="#Skills">Skills</a>
         </li>
         <li class="nav-item">
-          <div class="dropdown show">
-            <a class="btn btn-success dropdown-toggle" role="button" id="#dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="dropdown">
+            <span class="btn btn-primary dropdown-toggle" role="button" id="#dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Experience
-            </a>
+            </span>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="#ISLET">ISLET GROUP</a>
               <a class="dropdown-item" href="#RIG GAS">RIG GAS</a>
@@ -41,13 +48,13 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="btn btn-success" href="#Projects">Projects</a>
+          <a class="btn btn-primary" href="#Projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-success" href="#Education">Education</a>
+          <a class="btn btn-primary" href="#Education">Education</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-success" href="#Contacts">Contacts</a>
+          <a class="btn btn-primary" href="#Contacts">Contacts</a>
         </li>
       </ul>
     </div>
@@ -61,9 +68,7 @@
         <div class="card">
           <img class="card-img-top" src="images/oleg.jpg">
           <div class="card-body">
-            <h4 class="card-title">Oleg Ryzhkov</h4>
-            <p class="card-text">Experienced Executive/Entrepreneur
-            </p>
+            <h5 class="card-title">Oleg Ryzhkov</h5>
           </div>
         </div>
       </div>
@@ -156,25 +161,26 @@
           from scratch.
         </p>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
         <h4>Core Competences</h4>
         <div class="row">
           <br>
-          <a class="navbar-brand"><img src="images/tools/bpm.png"></a>
           <a class="navbar-brand"><img src="images/tools/project_man.png"></a>
-            <a class="navbar-brand"><img src="images/tools/data_analysis.png"></a>
+          <a class="navbar-brand"><img src="images/tools/bpm.png"></a>
+          <a class="navbar-brand"><img src="images/tools/data_science.jpg"></a>
+          <a class="navbar-brand"><img src="images/tools/data_analysis.png"></a>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
         <h4>Technologies</h4>
         <div class="row">
           <a class="navbar-brand"><img src="images/tools/python_1.jpg"></a>
           <a class="navbar-brand"><img src="images/tools/html.png"></a>
           <a class="navbar-brand"><img src="images/tools/css.png"></a>
-          <a class="navbar-brand"><img src="images/tools/js.jpg"></a>
+          <a class="navbar-brand"><img src="images/tools/js.png"></a>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
         <h4>Databases</h4>
         <div class="row">
           <a class="navbar-brand"><img src="images/tools/sqlite.jpg"></a>
@@ -202,7 +208,7 @@
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <h3 class="display-6">Experience</h3>
-              <p class="text-success">ISLET GROUP, Tbilisi, Georgia &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Co-Founder, 2013 - Current</p>
+              <p >ISLET GROUP, Tbilisi, Georgia &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Co-Founder, 2013 - Current</p>
             </div>
           </div>
           <div class="card-body">
@@ -259,11 +265,11 @@
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <h3 class="display-6">Experience</h3>
-              <p class="text-success">RIG GAS, Tbilisi, Georgia &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Managing Director, 2013 - 2019</p>
+              <p>RIG GAS, Tbilisi, Georgia &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Managing Director, 2013 - 2019</p>
             </div>
           </div>
           <div class="card-body">
-            <p class="text-muted">Industry: Oil&Gas, Petroleum & LPG Trading
+            <p class="text-muted">Industry: Oil&Gas, Terminal Services
             </p>
             <img class="card-img-bottom" src="images/railway.jpg">
           </div>
@@ -272,8 +278,6 @@
       <div class="col-md-8">
         <div class="card">
           <div class="container">
-            <h2>R.I.G. GAS Ltd</h2>
-            <p>Petroleum&LPG Terminal construction - Tbilisi, Georgia</p>
             <div class="embed-responsive embed-responsive-16by9">
               <iframe width="560" height="315"
               src="https://www.youtube.com/embed/Kkgp3iNLp4E"
@@ -291,57 +295,122 @@
 <div class="container-fluid padding first-container">
   <span class="anchor" id="Projects"></span>
   <div class="row padding">
-    <div class ="col-lg-12">
-      <h2>Projects</h2>
-    </div>
-    <div class="col-lg-12">
+    <div class="col-md-6">
       <div class="table-responsive">
-        <table class="table table-striped table-dark table-sm" style="margin-bottom: 0">
-          <tr>
-            <th>Projects/Assignments</th>
-            <th>Place</th>
-            <th>Descriptions</th>
-            <th>Technologies</th>
-          </tr>
-          <tr>
+        <table class="table table-sm" style="margin-bottom: 0">
+          <thead>
+            <tr class="table-primary">
+              <th>Projects</th>
+              <th>Period</th>
+              <th>Descriptions</th>
+              <th>Technologies</th>
+            </tr>
+          </thead>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Oil');" class= "small">
             <td>US Oil Market Analysis</td>
-            <td>Boot camp final project</td>
+            <td>Aug 2020 - Nov 2020</td>
             <td>Crude oil pricing prediction model</td>
             <td>Python, PostgreSQL, HTML, CSS</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Web');" class= "small">
+            <td>Web Scrapping</td>
+            <td>August 2020</td>
+            <td>WeatherApp Website</td>
+            <td>Python (FLASK), MongoDB</td>
           </tr>
-          <tr>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Web');" class= "small">
+            <td>Web Design Challenge</td>
+            <td>August 2020</td>
+            <td>WeatherApp Website</td>
+            <td>Bootstrap, HTML, CSS, Python</td>
+          </tr>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Alchemy');" class= "small">
             <td>SQLAlchemy-challenge</td>
-            <td>Boot camp home work assignment</td>
+            <td>August 2020</td>
             <td>Simple FLASK app for climate analysis</td>
             <td>Python(SQLAlchemy, FLASK), HTML, CSS</td>
           </tr>
-          <tr>
-            <td>Chicago Crime&Well Being</td>
-            <td>Boot camp group project</td>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Crime');" class= "small">
+            <td>Chicago Crime</td>
+            <td>July 2020</td>
             <td>Crime data analysis from different sources</td>
             <td>Python(Pandas, Matplotlib, Geomapping)</td>
+          </tr>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('API');" class= "small">
+            <td>API Challenge</td>
+            <td>July 2020</td>
+            <td>API interaction</td>
+            <td>Python()</td>
+          </tr>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Matplotlib');" class= "small">
+            <td>Matplotlib Challenge</td>
+            <td>July 2020</td>
+            <td>Simple FLASK app for climate analysis</td>
+            <td>Python(SQLAlchemy, FLASK), HTML, CSS</td>
+          </tr>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Pandas');" class= "small">
+            <td>Pandas Challenge</td>
+            <td>July 2020</td>
+            <td>Simple FLASK app for climate analysis</td>
+            <td>Python(Pandas)</td>
+          </tr>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Alchemy');" class= "small">
+            <td>Python Challenge</td>
+            <td>June 2020</td>
+            <td>Simple FLASK app for climate analysis</td>
+            <td>Python</td>
+          </tr>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('VBA');" class= "small">
+            <td>VBA Challenge</td>
+            <td>June 2020</td>
+            <td>Simple FLASK app for climate analysis</td>
+            <td>Python</td>
+          </tr>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('TA');" class= "small">
+            <td>Scholar TA</td>
+            <td>February 2020 - August 2020</td>
+            <td>Data driven intelligent assistant for EdD students</td>
+            <td>Python, Lucid Chart</td>
           </tr>
         </table>
       </div>
     </div>
+    <div class="col-md-6 anyClass" id="target-container">
+      <span class="picture" id="Oil"></span>
+      <p>US oil market analysis, Boot Camp Final Project</p>
+      <img class="d-block" src="images/projects/oil.png">
+      <span class="picture" id="Web"></span>
+      <p>Web Design Challenge, Boot Camp Homework Assignment</p>
+      <img class="d-block" src="images/projects/web.png">
+      <span class="picture" id="Alchemy"></span>
+      <p>SQLAlchemy Challenge, Boot Camp Homework Assignment</p>
+      <img class="d-block" src="images/projects/alchemy.png">
+      <span class="picture" id="Crime"></span>
+      <p>Chicago Crime & Well Being, Boot Camp Group Project </p>
+      <img class="d-block" src="images/projects/crime.png">
+      <span class="picture" id="API"></span>
+      <p>API Challenge, Boot Camp Homework Assignment</p>
+      <img class="d-block" src="images/projects/api.png">
+      <span class="picture" id="Matplotlib"></span>
+      <p>Matplotlib Challenge, Boot Camp Homework Assignment</p>
+      <img class="d-block" src="images/projects/matplotlib.png">
+      <span class="picture" id="Pandas"></span>
+      <p>Pandas Challenge, Boot Camp Homework Assignment</p>
+      <img class="d-block" src="images/projects/pandas.png">
+      <span class="picture" id="VBA"></span>
+      <p>VBA Challenge, Boot Camp Homework Assignment</p>
+      <img class="d-block" src="images/projects/vba.png">
+    </div>
   </div>
 </div>
 <!--- Education -->
-<div class="container-fluid padding">
-  <div class="row welcome text-center">
-    <div class="col-12">
-      <span class="anchor" id="Education"></span>
-      <h1 class="display-4">Education Background</h1>
-    </div>
-    <hr>
-  </div>
-</div>
+<hr class="my-4">
 <!--- Cards -->
 <div class="container-fluid padding">
   <div class="row padding">
     <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="images/booth.jpg">
+        <img class="card-img-top" src="images/booth.png">
         <div class="card-body">
           <h4 class="card-title">Chicago Booth, 2010-2012</h4>
           <p class="card-text">20 months Executive MBA program (London campus). Includes: Concentration
@@ -353,7 +422,7 @@
     </div>
     <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="images/data.png">
+        <img class="card-img-top" src="images/mim.png">
         <div class="card-body">
           <h4 class="card-title">Data Science</h4>
           <p class="card-text">Data Science and Visualization Program, which provides a 24-week intensive focused on gaining programming skills in Excel, VBA, Python, R, JavaScript, SQL, MongoDB, Bootstrap, HTML, CSS, Tableau, Big Data, and Machine Learning
@@ -380,7 +449,7 @@
 </div>
 <!--- Connect -->
 <div class="container-fluid">
-  <div class="row text-center padding">
+  <div class="row text-center">
     <span class="anchor" id="Contacts"></span>
     <div class="col-12">
       <h2>Contacts</h2>
