@@ -315,6 +315,10 @@ tbody {
   max-height: 560px;
 }
 
+.h600 tbody {
+  max-height: 600px;
+}
+
 .anyClass {
   height:400px;
   overflow-y:auto;
@@ -322,8 +326,8 @@ tbody {
 }
 
 tr:hover {
-  color: black;
-  background: lightgrey !important;
+  color: white;
+  background: darkblue !important;
 }
 
 .box-content {overflow-x:auto;}
