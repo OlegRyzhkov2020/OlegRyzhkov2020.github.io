@@ -10,11 +10,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script>
-    function scroll_to(target_id) {
-      var container = document.getElementById('target-container');
-      var scrollTo = document.getElementById(target_id);
-      container.scrollTop = scrollTo.offsetTop;
-    }
+  function scroll_to(target_id) {
+    var container = document.getElementById('target-container');
+    var scrollTo = document.getElementById(target_id);
+    container.scrollTop = scrollTo.offsetTop;
+  }
   </script>
   <link href="style.css" rel="stylesheet">
 </head>
@@ -186,6 +186,7 @@
           <a class="navbar-brand"><img src="images/tools/html.png"></a>
           <a class="navbar-brand"><img src="images/tools/css.png"></a>
           <a class="navbar-brand"><img src="images/tools/js.png"></a>
+          <a class="navbar-brand"><img src="images/tools/r_logo.jpg"></a>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 text-center">
@@ -227,10 +228,10 @@
               <td>Crude oil pricing prediction model</td>
               <td>Python, PostgreSQL, HTML, CSS</td>
             </tr >
-            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Web');" class= "small">
+            <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Mars');" class= "small">
               <td>Web Scrapping</td>
               <td>August 2020</td>
-              <td>WeatherApp Website</td>
+              <td>Mission to Mars</td>
               <td>Python (FLASK), MongoDB</td>
             </tr>
             <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('Web');" class= "small">
@@ -295,6 +296,9 @@
         <p>US oil market analysis</p>
         <img class="d-block" src="images/projects/oil.png">
         <span class="picture" id="Web"></span>
+        <p>Web Scraping</p>
+        <img class="d-block" src="images/projects/mars.png">
+        <span class="picture" id="Alchemy"></span>
         <p>Web Design Challenge</p>
         <img class="d-block" src="images/projects/web.png">
         <span class="picture" id="Alchemy"></span>
@@ -327,7 +331,7 @@
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <h3 class="display-6">Experience</h3>
-              <p >ISLET GROUP, Tbilisi, Georgia &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Co-Founder, 2013 - Current</p>
+              <p >ISLET GROUP, Tbilisi, Georgia <br/> Co-Founder, 2013 - Current</p>
             </div>
           </div>
           <div class="card-body">
@@ -384,7 +388,7 @@
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <h3 class="display-6">Experience</h3>
-              <p>RIG GAS, Tbilisi, Georgia &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Managing Director, 2013 - 2019</p>
+              <p>RIG GAS, Tbilisi, Georgia <br/> Managing Director, 2013 - 2019</p>
             </div>
           </div>
           <div class="card-body">
@@ -415,28 +419,158 @@
 <hr class="my-4">
 <!--- Cards -->
 <div class="container-fluid padding">
-    <span class="anchor" id="NWU"></span>
+  <span class="anchor" id="NWU"></span>
   <div class="row padding">
     <div class="col-md-4">
       <div class="card">
         <img class="card-img-top" src="images/bootcamp.png">
         <div class="card-body">
           <h4 class="card-title">Northwestern University, 2020</h4>
-          <p class="card-text">Data Science and Visualization Program, which provides a 24-week intensive focused on gaining programming skills in Excel, VBA, Python, R, JavaScript, SQL, MongoDB, Bootstrap, HTML, CSS, Tableau, Big Data, and Machine Learning
+          <p class="card-text">Data Science and Visualization Program, which provides a 24-week intensive focused on gaining programming skills in Data Analysis
           </p>
-          <a href="https://bootcamp.northwestern.edu/" class="btn btn-outline-secondary">Website</a>
         </div>
       </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-4">
+      <div class="table-responsive">
+        <table class="table table-sm h560">
+          <thead>
+            <tr class="table-dark">
+              <th>Courses</th>
+              <th>Sessions</th>
+              <th>Technologies</th>
+            </tr>
+          </thead>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('excel');" class= "small">
+            <td>Dipping Into Data</td>
+            <td>Week 1, June</td>
+            <td>MS Excel</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('vba');" class= "small">
+            <td>Visual Basic</td>
+            <td>Week 2, June</td>
+            <td>VBA</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('python_intro');" class= "small">
+            <td>Introduction to Python</td>
+            <td>Week 3, June</td>
+            <td>Python</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('pandas');" class= "small">
+            <td>Real-Word Data Parsing with Pandas</td>
+            <td>Week 4, July</td>
+            <td>Python(Pandas)</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('matplotlib');" class= "small">
+            <td>Data Visualization with Matplotlib</td>
+            <td>Week 5, July</td>
+            <td>Python(Matplotlib, Seaborn)</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('api');" class= "small">
+            <td>Working with Web Data</td>
+            <td>Week 6, July</td>
+            <td>Python(API requests)</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('project_1');" class= "small">
+            <td>Project work</td>
+            <td>Week 7-8, July</td>
+            <td>Python</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('api');" class= "small">
+            <td>Introduction to SQL</td>
+            <td>Week 9, July</td>
+            <td>PostrgreSQL, Python()</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('api');" class= "small">
+            <td>Advanced SQL</td>
+            <td>Week 10, August</td>
+            <td>PostrgreSQL, Python(SQLAlchemy, FLASK)</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('api');" class= "small">
+            <td>Intro to WEB Design</td>
+            <td>Week 11, August</td>
+            <td>HTML/CSS, Bootstrap</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('api');" class= "small">
+            <td>Web Scraping</td>
+            <td>Week 12, August</td>
+            <td>MongoDB, Python(Beatiful Soup, FLASK)</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('api');" class= "small">
+            <td>ETL Project</td>
+            <td>Week 13, August</td>
+            <td>PostrgreSQL, Python(Pandas)</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('java');" class= "small">
+            <td>Intro to JavaScript</td>
+            <td>Week 14, September</td>
+            <td>JavaScript</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('java');" class= "small">
+            <td>JavaScript APIs and Web Charting</td>
+            <td>Week 15, September</td>
+            <td>JavaScript</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('java');" class= "small">
+            <td>Interactive Data Visualization</td>
+            <td>Week 16, September</td>
+            <td>JavaScript(D3.js)</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('leaflet');" class= "small">
+            <td>Geomapping</td>
+            <td>Week 17, October</td>
+            <td>JavaScript(Leaflet.js)</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('leaflet');" class= "small">
+            <td>Geomapping</td>
+            <td>Week 17, October</td>
+            <td>JavaScript(Leaflet.js)</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('r');" class= "small">
+            <td>Introduction to R</td>
+            <td>Week 18, October</td>
+            <td>R</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('r');" class= "small">
+            <td>Data wrangling in R Project</td>
+            <td>Week 19, October</td>
+            <td>R</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('tableau');" class= "small">
+            <td>Business Intelligence, Dashboarding</td>
+            <td>Week 20, October</td>
+            <td>Tableau</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('ml');" class= "small">
+            <td>Introduction to Machine Learnign</td>
+            <td>Week 21, October</td>
+            <td>Tableau</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('ml');" class= "small">
+            <td>Introduction to Big Data</td>
+            <td>Week 22, November</td>
+            <td>ETL Cloud</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('ml');" class= "small">
+            <td>Final Project</td>
+            <td>Week 23-24, November</td>
+            <td>PostrgeSQL, MongoDB, Python, JavaScript, HTML/CSS</td>
+          </tr >
+        </table>
+      </div>
+    </div>
+    <div class="col-md-4">
       <div class="card">
-        <img class="card-img-top" src="images/nwu_zoom.png">
+        <img class="card-img-top" src="images/edu/excel.png">
+        <br/><br/>
+        <br/><br/>
+        <img class="card-img-top" src="images/edu/mining.png">
       </div>
     </div>
   </div>
 </div>
 <div class="container-fluid padding">
-    <span class="anchor" id="BOOTH"></span>
+  <span class="anchor" id="BOOTH"></span>
   <div class="row padding">
     <div class="col-md-4">
       <div class="card">
@@ -450,7 +584,60 @@
         </div>
       </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-4">
+      <div class="table-responsive">
+        <table class="table table-sm h560">
+          <thead>
+            <tr class="table-dark">
+              <th style="width: 50%">Courses</th>
+              <th style="width: 30%">Sessions</th>
+              <th style="width: 20%">Year</th>
+            </tr>
+          </thead>
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('regression');" class= "small">
+            <td style="width: 50%">Applied Regression Analysis</td>
+            <td style="width: 30%">Autumn</td>
+            <td style="width: 20%">2020</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('statistics');" class= "small">
+            <td style="width: 50%">Business Statistics</td>
+            <td style="width: 30%">Spring</td>
+            <td style="width: 20%">2020</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('technology');" class= "small">
+            <td style="width: 50%">Technology Strategy (XP)</td>
+            <td style="width: 30%">Winter</td>
+            <td style="width: 20%">2012</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('technology');" class= "small">
+            <td style="width: 50%">Entrepreneurial Finance and Private Equity II (XP)</td>
+            <td style="width: 30%">Winter</td>
+            <td style="width: 20%">2012</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('technology');" class= "small">
+            <td style="width: 50%">Entrepreneurial Strategy</td>
+            <td style="width: 30%">Winter</td>
+            <td style="width: 20%">2012</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('technology');" class= "small">
+            <td style="width: 50%">Strategic Leadership</td>
+            <td style="width: 30%">Winter</td>
+            <td style="width: 20%">2012</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('technology');" class= "small">
+            <td style="width: 50%">Global New Venture Challenge I</td>
+            <td style="width: 30%">Autumn</td>
+            <td style="width: 20%">2011</td>
+          </tr >
+          <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('technology');" class= "small">
+            <td style="width: 50%">Entrepreneurial Finance and Private Equity I (XP)</td>
+            <td style="width: 30%">Autumn</td>
+            <td style="width: 20%">2011</td>
+          </tr >
+        </table>
+      </div>
+    </div>
+    <div class="col-md-4">
       <div class="card">
         <img class="card-img-top" src="images/booth_diplom.jpg">
       </div>
@@ -508,7 +695,7 @@
               <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#">“In God we trust, all others bring data.” — W Edwards Deming </a> <span class="dot"></span> <a href="#">“If we have data, let’s look at data. If all we have are opinions, let’s go with mine.” — Jim Barksdale</a> </marquee>
             </div>
             <hr class="light">
-            <p class="blink_me">&copy; Oleg Ryzhkov 2020</p>
+            <p class="blink_me">Created by Oleg Ryzhkov 2020&emsp;<i class="far fa-envelope"></i>&emsp;oleg.n.ryzhkov@gmail.com</p>
           </div>
         </div>
       </div>

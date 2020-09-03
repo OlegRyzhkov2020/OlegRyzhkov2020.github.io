@@ -305,10 +305,14 @@ thead, tbody tr {
 }
 tbody {
   display: block;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: auto;
   table-layout: fixed;
   max-height: 400px;
+}
+
+.h560 tbody {
+  max-height: 560px;
 }
 
 .anyClass {
