@@ -28,8 +28,11 @@ html, body {
 img {
  max-width: 100%;
 }
+.p-block {
+  height:400px;
+}
 .first-container {
-  padding-top: 85px;
+  padding-top: 75px;
 }
 .navbar {
   padding: .8rem;
@@ -302,6 +305,10 @@ body {
 table {
   width: 100%;
 }
+.table-primary th {
+  background-color: darkblue;
+  color: white;
+}
 thead, tbody tr {
   display: table;
   width: 100%;
@@ -312,11 +319,13 @@ tbody {
   overflow-y: scroll;
   overflow-x: auto;
   table-layout: fixed;
-  max-height: 400px;
 }
 
-.h560 tbody {
-  max-height: 560px;
+.h520 tbody {
+  max-height: 390px;
+}
+.h580 tbody {
+  max-height: 590px;
 }
 
 .h600 tbody {
@@ -324,7 +333,7 @@ tbody {
 }
 
 .anyClass {
-  height:400px;
+  height:430px;
   overflow-y:auto;
   overflow-x: auto;
 }
@@ -360,7 +369,7 @@ figure {
   height: 100%;
 }
 #fixed {
-  background-image: url('images/html_code.png');
+  background-image: url('images/tools/html_code.png');
   position: fixed;
   display: block;
   top: 0;
