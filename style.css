@@ -4,6 +4,10 @@
   animation: blinker 5s linear infinite;
 }
 
+.blink_me:hover {
+  color: white !important;
+}
+
 .signature {
   font-weight: 500;
   font-style: oblique;
