@@ -5,7 +5,7 @@
 
 #worldmap {
     width: 100%;
-    height: 500px;
+    height: 520px;
     margin-left:10px; margin-right:auto; display:block;
 }
 
@@ -23,15 +23,15 @@
 }
 
 /* thanks to http://colorbrewer2.org/ */
-.q9-10{fill:rgb(165,0,38)}
+.q4-10{fill:rgb(165,0,38)}
 .q8-10{fill:rgb(215,48,39)}
-.q7-10{fill:rgb(244,109,67)}
+.q3-10{fill:rgb(244,109,67)}
 .q6-10{fill:rgb(253,174,97)}
 .q5-10{fill:rgb(254,224,139)}
-.q4-10{fill:rgb(217,239,139)}
-.q3-10{fill:rgb(166,217,106)}
+.q1-10{fill:rgb(217,239,139)}
+.q7-10{fill:rgb(166,217,106)}
 .q2-10{fill:rgb(102,189,99)}
-.q1-10{fill:rgb(26,152,80)}
+.q10-10{fill:rgb(26,152,80)}
 .q0-10{fill:rgb(0,104,55)}
 .default {
     fill: steelblue;
@@ -66,7 +66,7 @@
 }
 
 output {
-    font-size: xx-large;
+    font-size: large;
 }
 /* styling for the slider */
 input[type=range] {

@@ -21,7 +21,7 @@ var dataById;
 // https://github.com/schnerd/d3-scale-cluster
 var assignColor = d3.scaleCluster()
 // creating the range of colors - colors defined in css
-var colors= d3.range(10).map(i => ("country q" + i +"-10"));
+var colors= d3.range(5).map(i => ("country q" + i +"-10"));
 // tooltip variable
 var tooltip = d3.select("#worldmap")
     .append("div")
@@ -41,7 +41,7 @@ var clusters=[];
 d3.queue()   // queue function loads all external data files asynchronously
 //   .defer(d3.tsv, "data/110m.tsv")
   .defer(d3.json, "data/world-topo.json")  // our geometries, does not work with latest version of topojson countries data, probably different structure of data?
-  .defer(d3.csv, "data/bp_national_production.csv")
+  .defer(d3.csv, "data/countries.csv")
 //   .defer(d3.csv, "data/bp_national_consumption.csv")
   .await(processData);
 
@@ -65,6 +65,7 @@ function processData(err, world, production) {
         .key(d => d.country_code)
         .rollup(d => d[0])
         .map(dataset);
+    console.log(dataById);
     // assign values only to domain for later scaling (only values, need to be cleaned for undefined and n/a)
     for (i in countries.features) {
         switch (dataById.get(countries.features[i].properties.id)) {
@@ -102,6 +103,28 @@ function processData(err, world, production) {
                .on('mousemove', showTooltip)
                .on('mouseout', hideTooltip)
 
+    var marks = [{long: -87.623177, lat: 41.881832}];
+    g.selectAll("circle")
+            .data(marks)
+            .enter()
+            .append("circle")
+            .attr("cx", function(d) {return projection([d.long, d.lat])[0];})
+            .attr("cy", function(d) {return projection([d.long, d.lat])[1];})
+            .attr("r", 2)
+            .style("fill", "black")
+            .style("opacity", 0.6)
+            ;
+
+    // g.selectAll(".mark")
+    //    .data(marks)
+    //    .enter()
+    //    .append("image")
+    //    .attr('class','mark')
+    //    .attr('width', 20)
+    //    .attr('height', 20)
+    //    .attr("xlink:href",'https://cdn3.iconfinder.com/data/icons/softwaredemo/PNG/24x24/DrawingPin1_Blue.png')
+    //    .attr("transform", d => `translate(${projection([d.long,d.lat])}`);
+
     // call function to update colors
     updateMapColors();
     // drawMap();
@@ -120,7 +143,7 @@ function updateMapColors() {
                 return 'country default';
                 break;
             default:
-                if (isNaN(dataById.get(getId(d))[currentYear])) {
+                if (isNaN(dataById.get(getId(d))[currentYear])|dataById.get(getId(d))[currentYear]==0) {
                     return 'country default';
                 } else {
             return assignColor(dataById.get(getId(d))[currentYear]);

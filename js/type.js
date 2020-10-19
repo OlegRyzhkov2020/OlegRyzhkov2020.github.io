@@ -3,6 +3,7 @@ function autoType(elementClass, typingSpeed){
 var thhis = $(elementClass);
 thhis.css({
   "position": "relative",
+  "left-margin": "30px",
   "display": "inline-block"
 });
 thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');

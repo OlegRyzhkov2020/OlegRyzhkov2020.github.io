@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
 
   <!-- JS libraries -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -103,8 +104,9 @@
       <div class="col-md-8">
         <div class="row">
           <div class="type-js-0 text-center">
-            <h6 class="text-js signature" > Lived and worked in 5 countries and 11 cities
+            <h6 class="text-js signature" style='margin-left:300px'> Lived and worked in 5 countries and 11 cities
             </h6>
+            <br>
           </div>
         </div>
         <div class="row" >
@@ -112,24 +114,24 @@
         </div>
 
         <div class="row">
-            <div class="col-md-1">
-                <button id="play" type="button" class="btn btn-success">play</button>
+            <div class="col-md-2">
+                <button id="play" type="button" class="btn btn-variant">play</button>
             </div>
             <div class="col-md-1">
                 <output id="output">1990</output>
             </div>
-            <div class="col-md-6">
-                <input id="sequence" type="range" min="1990", max="2019", value="1990", step="1" >
+            <div class="col-md-5">
+                <input id="sequence" type="range" min="1990", max="2020", value="1990", step="1" >
             </div>
             <div class="col-md-4">
               <div class='my-legend'>
               <div class='legend-scale'>
                 <ul class='legend-labels'>
-                  <li><span style='background:#F1EEF6;'></span>not yet</li>
-                  <li><span style='background:#BDC9E1;'></span>travel</li>
-                  <li><span style='background:#74A9CF;'></span>business</li>
-                  <li><span style='background:#2B8CBE;'></span>study</li>
-                  <li><span style='background:#045A8D;'></span>live</li>
+                  <li><span style='background:#4682b4;'></span>not yet</li>
+                  <li><span style='background:#d9ef8b;'></span>travel</li>
+                  <li><span style='background:#66bd63;'></span>business</li>
+                  <li><span style='background:#f46d43;'></span>study</li>
+                  <li><span style='background:#a50026;'></span>live</li>
                 </ul>
               </div>
               </div>
@@ -213,7 +215,7 @@
               <td>Oil Data Analytics</td>
               <td>Aug 2020 - current</td>
               <td>Oil Data Analysis and  Price Model</td>
-              <td>Python, PostgreSQL, JS(D3, Chart), HTML, CSS</td>
+              <td>Python, R, PostgreSQL, JS(D3, Chart), HTML/CSS</td>
             </tr >
             <tr style='cursor: pointer; cursor: hand;' onclick="scroll_to('TA');" class= "small">
               <td>Scholar TA</td>
@@ -774,16 +776,16 @@
         <hr class="light">
         <h5>Preffered Locations:</h5>
         <hr class="light">
-        <p> USA: IL, TX, NY, WA</p>
-        <p> Canada, Eastern Europe</p>
-        <p> Asia: China, India, Singapore</p>
+        <p> USA</p>
+        <p> Illinois: Chicago</p>
+        <p> Texas: Houston, Austin</p>
       </div>
       <div class="col-md-4">
         <hr class="light">
         <h5>Preffered Industries:</h5>
         <hr class="light">
         <p>Oil Trading, Utilities</p>
-        <p>Finance, Commodities</p>
+        <p>FinTech, Consulting</p>
         <p>Information Technologies</p>
       </div>
       <div class="col-md-4">
