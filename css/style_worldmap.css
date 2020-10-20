@@ -23,15 +23,15 @@
 }
 
 /* thanks to http://colorbrewer2.org/ */
-.q4-10{fill:rgb(165,0,38)}
+.q4-10{fill:rgb(254,224,139)} /*light yellow*/
 .q8-10{fill:rgb(215,48,39)}
-.q3-10{fill:rgb(244,109,67)}
+.q3-10{fill:rgb(166,217,106)} /*lightgreen*/
 .q6-10{fill:rgb(253,174,97)}
-.q5-10{fill:rgb(254,224,139)}
-.q1-10{fill:rgb(217,239,139)}
+.q5-10{fill:rgb(165,0,38)} /*darkred*/
+.q1-10{fill:rgb(189,201,225)} /*steel blue*/
 .q7-10{fill:rgb(166,217,106)}
-.q2-10{fill:rgb(102,189,99)}
-.q10-10{fill:rgb(26,152,80)}
+.q2-10{fill:rgb(217,239,139)} /*green*/
+.q10-10{fill:rgb(26,152,80)} /*darkgreen*/
 .q0-10{fill:rgb(0,104,55)}
 .default {
     fill: steelblue;

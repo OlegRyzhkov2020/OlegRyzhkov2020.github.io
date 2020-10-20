@@ -21,7 +21,7 @@ var dataById;
 // https://github.com/schnerd/d3-scale-cluster
 var assignColor = d3.scaleCluster()
 // creating the range of colors - colors defined in css
-var colors= d3.range(5).map(i => ("country q" + i +"-10"));
+var colors= d3.range(6).map(i => ("country q" + i +"-10"));
 // tooltip variable
 var tooltip = d3.select("#worldmap")
     .append("div")
