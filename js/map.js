@@ -26,6 +26,7 @@ var colors= d3.range(6).map(i => ("country q" + i +"-10"));
 var tooltip = d3.select("#worldmap")
     .append("div")
     .attr("class", "worldMapTooltip hidden");
+
 // other global variables
 var dataset;
 var domain = [];
@@ -42,11 +43,12 @@ d3.queue()   // queue function loads all external data files asynchronously
 //   .defer(d3.tsv, "data/110m.tsv")
   .defer(d3.json, "data/world-topo.json")  // our geometries, does not work with latest version of topojson countries data, probably different structure of data?
   .defer(d3.csv, "data/countries.csv")
-//   .defer(d3.csv, "data/bp_national_consumption.csv")
+  .defer(d3.csv, "data/cities.csv")
   .await(processData);
 
 
-function processData(err, world, production) {
+function processData(err, world, production, cities) {
+    console.log(cities);
     // save countries variable
     var countries = topojson.feature(world, world.objects.countries);
    // get the scale and center parameters from the features
@@ -65,7 +67,7 @@ function processData(err, world, production) {
         .key(d => d.country_code)
         .rollup(d => d[0])
         .map(dataset);
-    console.log(dataById);
+
     // assign values only to domain for later scaling (only values, need to be cleaned for undefined and n/a)
     for (i in countries.features) {
         switch (dataById.get(countries.features[i].properties.id)) {
@@ -97,23 +99,60 @@ function processData(err, world, production) {
     g.selectAll('path')
         .data(countries.features)
         .enter().append('path')
-            .attr('class', 'country')
-            .attr('d', pathGenerator)
-               // show tooltip when mouse move over the country DOES NOT WORK YET
-               .on('mousemove', showTooltip)
-               .on('mouseout', hideTooltip)
+        .attr('class', 'country')
+        .attr('d', pathGenerator)
+        // show tooltip when mouse move over the country DOES NOT WORK YET
+        .on('mousemove', showTooltip)
+        .on('mouseout', hideTooltip);
 
-    var marks = [{long: -87.623177, lat: 41.881832}];
-    g.selectAll("circle")
-            .data(marks)
-            .enter()
-            .append("circle")
-            .attr("cx", function(d) {return projection([d.long, d.lat])[0];})
-            .attr("cy", function(d) {return projection([d.long, d.lat])[1];})
-            .attr("r", 2)
-            .style("fill", "black")
-            .style("opacity", 0.6)
-            ;
+        // draw points
+           g.selectAll("circle")
+               .data(cities)
+               .enter()
+               .append("circle")
+       		.attr("class","circles")
+               .attr("cx", function(d) {return projection([d.Longitude, d.Lattitude])[0];})
+               .attr("cy", function(d) {return projection([d.Longitude, d.Lattitude])[1];})
+               .attr("r", 2)
+               .style("fill", "black"),
+
+        // add labels
+           g.selectAll("text")
+               .data(cities)
+               .enter()
+               .append("text")
+       		.text(function(d) {
+       			   		return d.City;
+       			   })
+       		.attr("x", function(d) {return projection([d.Longitude, d.Lattitude])[0] -10;})
+       		.attr("y", function(d) {return projection([d.Longitude, d.Lattitude])[1] - 5;})
+       		.attr("class","labels")
+          .style("fill", "black");
+
+    var origin = [cities[0].Longitude, cities[0].Lattitude];
+    var destination = [cities[1].Longitude, cities[1].Lattitude];
+    // Create data: coordinates of start and end
+    var link = {type: "LineString", coordinates: [origin, destination]} // Change these data to see ho the great circle reacts
+    // A path generator
+    var path = d3.geoPath()
+      .projection(projection);
+    // Add the path
+    g.append("path")
+      .attr("d", path(link))
+      .style("fill", "none")
+      .style("stroke", "darkred")
+      .style("stroke-width", 2);
+    // var route = g.append("path")
+    //            .datum({type: "LineString", coordinates: [origin, destination]})
+    //            .attr("class", "route")
+    //            .attr("d", path);
+    // var geoInterpolator = d3.geoInterpolate(londonLonLat, newYorkLonLat);
+    //
+    // geoInterpolator(0);
+    //        // returns [0.1278, 51.5074]
+    //
+    // geoInterpolator(0.5);
+
 
     // g.selectAll(".mark")
     //    .data(marks)
