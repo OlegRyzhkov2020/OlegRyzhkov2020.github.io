@@ -48,7 +48,7 @@ d3.queue()   // queue function loads all external data files asynchronously
 
 
 function processData(err, world, production, cities) {
-    console.log(cities);
+    var curCity = 0;
     // save countries variable
     var countries = topojson.feature(world, world.objects.countries);
    // get the scale and center parameters from the features
@@ -129,29 +129,50 @@ function processData(err, world, production, cities) {
        		.attr("class","labels")
           .style("fill", "black");
 
-    var origin = [cities[0].Longitude, cities[0].Lattitude];
-    var destination = [cities[1].Longitude, cities[1].Lattitude];
-    // Create data: coordinates of start and end
-    var link = {type: "LineString", coordinates: [origin, destination]} // Change these data to see ho the great circle reacts
-    // A path generator
-    var path = d3.geoPath()
-      .projection(projection);
-    // Add the path
-    g.append("path")
-      .attr("d", path(link))
-      .style("fill", "none")
-      .style("stroke", "darkred")
-      .style("stroke-width", 2);
-    // var route = g.append("path")
-    //            .datum({type: "LineString", coordinates: [origin, destination]})
-    //            .attr("class", "route")
-    //            .attr("d", path);
-    // var geoInterpolator = d3.geoInterpolate(londonLonLat, newYorkLonLat);
-    //
-    // geoInterpolator(0);
-    //        // returns [0.1278, 51.5074]
-    //
-    // geoInterpolator(0.5);
+
+    // data is created inside the function so it is always unique
+    let repeat = () => {
+        function getRandomInt(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+          };
+
+        var start = curCity;
+        var finish = (curCity+1)%cities.length;
+        curCity = finish;
+        //var data = 1;
+
+
+        var origin = [cities[start].Longitude, cities[start].Lattitude];
+        var destination = [cities[finish].Longitude, cities[finish].Lattitude];
+        // Create data: coordinates of start and end
+        var link = {type: "LineString", coordinates: [origin, destination]} // Change these data to see ho the great circle reacts
+        // A path generator
+        var path = d3.geoPath()
+          .projection(projection);
+
+        g.selectAll(".cities").remove();
+
+        // Add the path
+        var path_route = g.append("path")
+              .attr("d", path(link))
+              .attr('class', 'cities')
+              .attr("fill", "none")
+              .attr("stroke", "darkred")
+              .attr("stroke-width", 2);
+
+        //path_route.selectAll("path").remove();
+
+        path_route.transition()
+                .attr("stroke-dasharray", 5 + " " + 5)
+                .attr("stroke-dashoffset", 5)
+                .duration(1000)
+                .ease(d3.easeLinear)
+                .attr("stroke-dashoffset", 0)
+                .on("end", repeat);
+    };
+    repeat();
 
 
     // g.selectAll(".mark")
